@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && npm run dev\" \"cd my-app && npm run dev\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-client": "cd my-app && npm install",
+    "install-server": "cd backend && npm install",
+    "install": "npm run install-client && npm run install-server",
+    "build": "cd my-app && npm run build",
+    "start": "concurrently \"cd backend && npm run dev\" \"cd my-app && npm run dev\""
   },
   "keywords": [],
   "author": "",
