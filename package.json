@@ -7,7 +7,7 @@
     "install-server": "cd backend && npm install",
     "install": "npm run install-client && npm run install-server",
     "build": "cd my-app && npm run build",
-    "start": "npm run build && cd backend && node index.js"
+    "start": "concurrently \"cd backend && npm run dev\" \"cd my-app && npm run dev\""
   },
   "keywords": [],
   "author": "",
